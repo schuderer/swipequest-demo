@@ -11,3 +11,8 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+====
+
+This repository contains dependencies which may contain their own license (such as GNU Lesser Public License for p5.js).
+It is recommended you check those licenses as well.
