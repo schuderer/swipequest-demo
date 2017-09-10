@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+    <link rel="apple-touch-startup-image" href="assets/startup-image_750x1294.png">
+    <!--<link href="750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">-->
+
+    <meta name="apple-mobile-web-app-title" content="SwipeQuest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- firebase (database/backend as a service) -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "__YOURKEYHERE__",
+            authDomain: "__YOUR_AUTH_DOMAIN_HERE__",
+            databaseURL: "__DB_URL__",
+            storageBucket: "__STORAGE_BUCKET__",
+            messagingSenderId: "__THE_ID__"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- P5.js libraries -->
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <!-- uncomment lines below to include extra p5 libraries -->
+    <!--<script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>-->
+    <!--<script language="javascript" type="text/javascript" src="libraries/p5.sound.js"></script>-->
+    <script language="javascript" type="text/javascript" src="libraries/p5.play.js"></script>
+
+    <!-- swipequest files below - TODO: use require() or something... -->
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="game.js"></script>
+    <script language="javascript" type="text/javascript" src="games/slingshot/main.js"></script>
+    <script language="javascript" type="text/javascript" src="games/slingshot/introoverlay.js"></script>
+    <script language="javascript" type="text/javascript" src="games/slingshot/sky.js"></script>
+    <script language="javascript" type="text/javascript" src="games/slingshot/target.js"></script>
+    <script language="javascript" type="text/javascript" src="games/slingshot/sling.js"></script>
+    <script language="javascript" type="text/javascript" src="games/slingshot/projectile.js"></script>
+
+    <style>
+        body {
+            background-color: black;
+            padding: 0;
+            margin: 0;
+            color: #EEEEEE;
+            font-family: "Lucida  Sans  Unicode", "Lucida  Grande", sans-serif;
+            font-size: 11pt;
+        }
+        
+        #landscape {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: #000000;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 20000;
+            opacity: 0.8;
+            margin: 0 auto;
+        }
+        
+        #landscape div {
+            opacity: 1;
+            top: 50%;
+            position: absolute;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="landscape">
+        <div>Please rotate device</div>
+    </div>
+</body>
+
+</html>
